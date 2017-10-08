@@ -16,6 +16,7 @@
 		C13ACC781F8A933C001232F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C13ACC761F8A933C001232F1 /* LaunchScreen.storyboard */; };
 		C13ACC831F8A933C001232F1 /* SocialMediaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13ACC821F8A933C001232F1 /* SocialMediaTests.swift */; };
 		C13ACC8E1F8A933C001232F1 /* SocialMediaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13ACC8D1F8A933C001232F1 /* SocialMediaUITests.swift */; };
+		C13ACC9F1F8AAD3B001232F1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C13ACC9B1F8A949C001232F1 /* GoogleService-Info.plist */; };
 		FF75C2E0B7CBA24E908FA218 /* Pods_SocialMediaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 329E713B60D6F6C413C374C7 /* Pods_SocialMediaUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -141,12 +142,12 @@
 				C13ACC9E1F8A972C001232F1 /* Controller */,
 				C13ACC9D1F8A9729001232F1 /* View */,
 				C13ACC9C1F8A9725001232F1 /* Model */,
-				C13ACC9B1F8A949C001232F1 /* GoogleService-Info.plist */,
 				C13ACC6D1F8A933C001232F1 /* AppDelegate.swift */,
 				C13ACC711F8A933C001232F1 /* Main.storyboard */,
 				C13ACC741F8A933C001232F1 /* Assets.xcassets */,
 				C13ACC761F8A933C001232F1 /* LaunchScreen.storyboard */,
 				C13ACC791F8A933C001232F1 /* Info.plist */,
+				C13ACC9B1F8A949C001232F1 /* GoogleService-Info.plist */,
 			);
 			path = SocialMedia;
 			sourceTree = "<group>";
@@ -308,6 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C13ACC781F8A933C001232F1 /* LaunchScreen.storyboard in Resources */,
+				C13ACC9F1F8AAD3B001232F1 /* GoogleService-Info.plist in Resources */,
 				C13ACC751F8A933C001232F1 /* Assets.xcassets in Resources */,
 				C13ACC731F8A933C001232F1 /* Main.storyboard in Resources */,
 			);
