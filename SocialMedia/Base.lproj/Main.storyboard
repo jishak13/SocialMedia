@@ -124,15 +124,49 @@
                     <connections>
                         <outlet property="emailField" destination="uzt-hm-ghf" id="Scw-Me-Wis"/>
                         <outlet property="passwordField" destination="Ppj-O5-bqk" id="1xw-TS-fZj"/>
+                        <segue destination="oKP-Ou-9uq" kind="show" identifier="goToFeed" id="QJH-SL-JjF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+            <point key="canvasLocation" x="-561" y="146"/>
+        </scene>
+        <!--FeedVC-->
+        <scene sceneID="e0s-MF-DPi">
+            <objects>
+                <viewController id="oKP-Ou-9uq" customClass="FeedVC" customModule="SocialMedia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bTS-5d-Yx5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Rr-lT-Phb">
+                                <rect key="frame" x="141.5" y="301.5" width="92" height="65"/>
+                                <state key="normal" image="sign-out"/>
+                                <connections>
+                                    <action selector="signOutTapped:" destination="oKP-Ou-9uq" eventType="touchUpInside" id="YQG-5N-0bM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.22197822780000001" green="0.57120361529999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" red="0.22197822780000001" green="0.57120361529999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="1Rr-lT-Phb" firstAttribute="centerX" secondItem="bTS-5d-Yx5" secondAttribute="centerX" id="6WI-az-vKY"/>
+                            <constraint firstItem="1Rr-lT-Phb" firstAttribute="centerY" secondItem="bTS-5d-Yx5" secondAttribute="centerY" id="g5D-De-Mak"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dNq-Ec-asw"/>
+                    </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="goToSignIn" id="PtK-G1-QbB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dNA-wV-Ysg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="252" y="145"/>
         </scene>
     </scenes>
     <resources>
         <image name="devslopes-logo" width="150" height="94"/>
         <image name="f" width="352" height="328"/>
+        <image name="sign-out" width="92" height="65"/>
     </resources>
 </document>
