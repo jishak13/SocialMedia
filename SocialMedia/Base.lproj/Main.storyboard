@@ -143,7 +143,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GfK-Hs-h8d" customClass="FancyView" customModule="SocialMedia" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sign-out" translatesAutoresizingMaskIntoConstraints="NO" id="aLs-lz-jZI">
+                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sign-out" translatesAutoresizingMaskIntoConstraints="NO" id="aLs-lz-jZI">
                                         <rect key="frame" x="16" y="19" width="50" height="37"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="37" id="TVp-aa-LSf"/>
@@ -179,13 +179,17 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="f3M-9Z-Zvo">
                                         <rect key="frame" x="8" y="8" width="327" height="49"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="YlM-i9-954" customClass="CircleView" customModule="SocialMedia" customModuleProvider="target">
+                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="YlM-i9-954" customClass="CircleView" customModule="SocialMedia" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="49" height="49"/>
                                                 <color key="backgroundColor" red="0.0" green="0.51372549020000002" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="49" id="8Bm-ol-YyH"/>
                                                     <constraint firstAttribute="height" constant="49" id="saz-8Y-AFl"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="1Vb-49-2CR" appends="YES" id="VeT-Mn-v3a"/>
+                                                </connections>
                                             </imageView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Add  A Caption" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fWk-1b-P8d" customClass="FancyField" customModule="SocialMedia" customModuleProvider="target">
                                                 <rect key="frame" x="59" y="0.0" width="209" height="49"/>
@@ -372,6 +376,7 @@
                         <viewLayoutGuide key="safeArea" id="dNq-Ec-asw"/>
                     </view>
                     <connections>
+                        <outlet property="addImage" destination="YlM-i9-954" id="7cz-Rd-BDK"/>
                         <outlet property="tableView" destination="8F7-5N-PKv" id="xTW-qb-ADs"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="goToSignIn" id="PtK-G1-QbB"/>
                     </connections>
@@ -380,6 +385,11 @@
                 <tapGestureRecognizer id="CDU-Ru-DuN">
                     <connections>
                         <action selector="signOutTapped:" destination="oKP-Ou-9uq" id="Ek2-g3-iTr"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="1Vb-49-2CR">
+                    <connections>
+                        <action selector="addImageTapped:" destination="oKP-Ou-9uq" id="lMN-lD-7YZ"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
