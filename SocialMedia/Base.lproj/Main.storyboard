@@ -263,10 +263,14 @@
                                                                                         </label>
                                                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty-heart" translatesAutoresizingMaskIntoConstraints="NO" id="Slh-Oa-X5v">
                                                                                             <rect key="frame" x="270" y="0.0" width="60" height="60"/>
+                                                                                            <gestureRecognizers/>
                                                                                             <constraints>
                                                                                                 <constraint firstAttribute="height" constant="60" id="8L5-Ds-QQ4"/>
                                                                                                 <constraint firstAttribute="width" constant="60" id="akY-7h-xDH"/>
                                                                                             </constraints>
+                                                                                            <connections>
+                                                                                                <outletCollection property="gestureRecognizers" destination="RRc-ZH-Qch" appends="YES" id="Ajy-AG-bdw"/>
+                                                                                            </connections>
                                                                                         </imageView>
                                                                                     </subviews>
                                                                                     <constraints>
@@ -343,6 +347,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="caption" destination="Ghi-Hk-mwR" id="wMZ-LE-aGv"/>
+                                            <outlet property="likeImg" destination="Slh-Oa-X5v" id="mz9-89-2AY"/>
                                             <outlet property="likesLbl" destination="3nn-PW-uVB" id="vyo-2N-svL"/>
                                             <outlet property="postImg" destination="wyQ-sa-uZM" id="YJY-le-CcE"/>
                                             <outlet property="profileImg" destination="IEa-aU-6RB" id="3xV-7l-yEa"/>
@@ -396,6 +401,7 @@
                         <action selector="addImageTapped:" destination="oKP-Ou-9uq" id="lMN-lD-7YZ"/>
                     </connections>
                 </tapGestureRecognizer>
+                <tapGestureRecognizer id="RRc-ZH-Qch"/>
             </objects>
             <point key="canvasLocation" x="252" y="144.3778110944528"/>
         </scene>
