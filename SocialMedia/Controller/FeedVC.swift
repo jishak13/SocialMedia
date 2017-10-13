@@ -13,22 +13,24 @@ import Firebase
 class FeedVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.delegate  = self
-        tableView.dataSource = self
+               tableView.delegate = self
+       tableView.dataSource = self
         // Do any additional setup after loading the view.
     }
-
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
+  
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       return 3
+        return 30
     }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        return tableView.dequeueReusableCell(withIdentifier: "PostCell") as! PostCell
     }
     @IBAction func signOutTapped(_ sender: Any) {
         let keychainresult: Bool = KeychainWrapper.standard.removeObject(forKey: "\(KEY_UID)")
